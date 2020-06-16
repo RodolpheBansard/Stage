@@ -10,10 +10,10 @@ public class Benchmark : MonoBehaviour
     [SerializeField] Text fpsText;
     private int index = 0;
     private float deltaTime = 0;
-    
+
     void Start()
     {
-        foreach(GameObject terrain in terrains)
+        foreach (GameObject terrain in terrains)
         {
             terrain.SetActive(false);
         }
@@ -30,10 +30,11 @@ public class Benchmark : MonoBehaviour
 
     public void LoadNextTerrain()
     {
+        print("clicked");
         terrains[index].SetActive(false);
 
         index++;
-        if(index >= terrains.Count)
+        if (index >= terrains.Count)
         {
             index = 0;
         }
